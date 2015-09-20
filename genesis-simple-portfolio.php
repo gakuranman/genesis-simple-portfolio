@@ -180,6 +180,39 @@ function gsp_portfolio_post_type() {
 }
 
 // =================================================================
+// = Portfolio Permalink Rules =
+// =================================================================
+
+//* Flush rewrite rules after activating plugin
+register_activation_hook( __FILE__, 'gsp_rewrite_flush' );
+function gsp_rewrite_flush() {
+
+	gsp_type_taxonomy();
+	gsp_label_taxonomy();
+	gsp_portfolio_post_type();
+	flush_rewrite_rules();
+}
+
+//* Tell WordPress the slug is taken for hierarchical posts
+add_filter( 'wp_unique_post_slug_is_bad_hierarchical_slug', 'gsp_is_bad_hierarchical_slug', 10, 4 );
+function gsp_is_bad_hierarchical_slug( $is_bad_hierarchical_slug, $slug, $post_type, $post_parent ) {
+
+	// This post has no parent and is a "base" post
+	if ( !$post_parent && $slug == 'portfolio' || $slug == 'type' || $slug == 'label'  )
+		return true;
+	return $is_bad_hierarchical_slug;
+}
+
+//* Tell WordPress the slug is taken for non-hierarchical posts
+add_filter( 'wp_unique_post_slug_is_bad_flat_slug', 'gsp_is_bad_flat_slug', 10, 3 );
+function gsp_is_bad_flat_slug( $is_bad_flat_slug, $slug, $post_type ) {
+
+	if ( $slug == 'portfolio' || $slug == 'type' || $slug == 'label' )
+		return true;
+	return $is_bad_flat_slug;
+}
+
+// =================================================================
 // = Portfolio Admin =
 // =================================================================
 
