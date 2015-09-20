@@ -38,6 +38,10 @@ Read more on the plugin's tutorial page: http://gakuran.com/genesis-simple-portf
 
 ## == Changelog ==
 
+= 0.2 =
+* Added rewrite flush rules to prevent 404s after activating plugin.
+* Added bad slug rules to prevent WordPress creating posts or pages using the Portfolio slug.
+
 = 0.1 =
 * Inital release.
 
