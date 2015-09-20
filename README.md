@@ -61,7 +61,6 @@ A special thanks to all who have contributed.
 * Carrie Dils
 * Mike Schinkel
 * Somatic
-* Rachel Carden
 * Brandon Kraft
 
 = Translations =
