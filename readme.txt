@@ -13,9 +13,13 @@ Adds a portfolio custom post type to any WordPress website, with support for the
 
 == Description ==
 
-This is a lightweight and simple plugin that creates a custom post type ('portfolio') with two clean taxonomies ('types' and 'labels') to your WordPress installation. It can be used for creating a portfolio on any WordPress website, and also includes special support for the Genesis framework.
+Genesis Simple Portfolio is a lightweight plugin that adds a custom post type ('portfolio') and two clean taxonomies ('types' and 'labels') to your WordPress installation. It can be used for creating a portfolio on any WordPress website, and also includes special support for the Genesis framework and child themes.
 
-One or more portfolios can be created with a wide variety of uses, such as a photography album, personal project listings and work services. The plugin also features a few nifty extras to enhance the user experience by adding featured image thumbnails and a filtering system to the Portfolio admin menu for easy searching through your items.
+The plugin also features a few nifty extras to enhance your experience. You'll see featured image thumbnails in the Portfolio admin menus and also a filtering system to help you search through your items!
+
+Example uses for the portfolio include displaying photography albums, showing past projects and advertising work services.
+
+Please note - this plugin does not control how portfolio items are displayed on your WordPress theme. For more information on how to customise your theme, please visit the Genesis Simple Portfolio plugin homepage: http://gakuran.com/genesis-simple-portfolio/
 
 == Installation ==
 
