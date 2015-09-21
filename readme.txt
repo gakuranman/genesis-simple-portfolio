@@ -22,14 +22,22 @@ One or more portfolios can be created with a wide variety of uses, such as a pho
 1. Upload contents of the directory to /wp-content/plugins/ (or use the automatic installer).
 2. Activate the plugin through the 'Plugins' menu in WordPress.
 3. Click on 'Portfolio' in the admin menu to add new items.
-4. Create a file called 'archive.php' in your WordPress theme to view archive listings.
 
 = Optional =
 
+4. Create a file called 'archive.php' in your WordPress theme to view archive listings.
 5. Create a file called 'archive-portfolio.php' in your WordPress theme in order to customise the portfolio archive listing.
 6. Create files called 'taxonomy-type.php' and 'taxonomy-label.php' in your WordPress theme in order to customise the taxonomy archive listings.
 
+= After De-activating =
+
+7. If deactivating the plugin, please visit the Settings > Permalinks page in the WordPress menu to update your URL structures after doing so. Just visiting this page (no need to even click 'Save Changes') will flush the rewrite rules and make sure everything is working correctly on your website.
+
 == Frequently Asked Questions ==
+
+1. Do I need Genesis in order to use this plugin?
+
+No, you can use this plugin on any WordPress website or theme. The plugin includes special support for the Genesis framework (such as adding a Portfolio Archive Settings page), but this does not affect usage on regular WordPress websites.
 
 Read more on the plugin's tutorial page: http://gakuran.com/genesis-simple-portfolio/
 
