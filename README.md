@@ -1,4 +1,4 @@
-## === Genesis Simple Portfolio ===
+# === Genesis Simple Portfolio ===
 
 * Contributors: gakuranman
 * Donate link: http://gakuran.com/genesis-simple-portfolio/
@@ -9,11 +9,13 @@
 * License: GPLv2 or later
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a portfolio to any WordPress theme, with support for the Genesis framework.
+Adds a portfolio custom post type to any WordPress website, with support for the Genesis framework.
 
 ## == Description ==
 
-This is a lightweight and simple plugin that adds a custom post type ('portfolio') with two clean taxonomies ('types' and 'labels') to your WordPress installation. It can be used for creating a portfolio on any WordPress theme, and also includes special support for the Genesis framework. One or more portfolios can be created with a wide variety of uses, such as a photography album, personal project listings and work services. The plugin also features a few nifty extras to enhance the user experience by adding featured image thumbnails and a filtering system to the Portfolio admin menu for easy searching through your items.
+This is a lightweight and simple plugin that creates a custom post type ('portfolio') with two clean taxonomies ('types' and 'labels') to your WordPress installation. It can be used for creating a portfolio on any WordPress website, and also includes special support for the Genesis framework.
+
+One or more portfolios can be created with a wide variety of uses, such as a photography album, personal project listings and work services. The plugin also features a few nifty extras to enhance the user experience by adding featured image thumbnails and a filtering system to the Portfolio admin menu for easy searching through your items.
 
 ## == Installation ==
 
@@ -22,7 +24,7 @@ This is a lightweight and simple plugin that adds a custom post type ('portfolio
 3. Click on 'Portfolio' in the admin menu to add new items.
 4. Create a file called 'archive.php' in your WordPress theme to view archive listings.
 
-= Optional =
+### = Optional =
 
 5. Create a file called 'archive-portfolio.php' in your WordPress theme in order to customise the portfolio archive listing.
 6. Create files called 'taxonomy-type.php' and 'taxonomy-label.php' in your WordPress theme in order to customise the taxonomy archive listings.
@@ -38,26 +40,26 @@ Read more on the plugin's tutorial page: http://gakuran.com/genesis-simple-portf
 
 ## == Changelog ==
 
-= 0.2 =
+#### = 0.2 =
 * Added rewrite flush rules to prevent 404s after activating plugin.
 * Added bad slug rules to prevent WordPress creating posts or pages using the Portfolio slug.
 
-= 0.1 =
+#### = 0.1 =
 * Inital release.
 
 ## == Upgrade Notice ==
 
-= 0.1 =
+#### = 0.1 =
 * Inital release.
 
 ## == Thanks ==
 
 A special thanks to all who have contributed.
 
-= Financial Donations =
+### = Financial Donations =
 * Be the first!
 
-= Code Contributions =
+### = Code Contributions =
 * Bill Erickson
 * Brian Gardner
 * Justin Tadlock
@@ -68,10 +70,10 @@ A special thanks to all who have contributed.
 * Rachel Carden
 * Brandon Kraft
 
-= Translations =
+### = Translations =
 * Be the first!
 
-= StudioPress =
+### = StudioPress =
 * Special thanks to StudioPress for creating the Genesis framework and making this possible.
 
 If you're not listed and think you should be, please drop me a line!
