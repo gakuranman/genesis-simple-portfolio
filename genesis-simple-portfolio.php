@@ -53,7 +53,7 @@ function gsp_type_taxonomy() {
 		'parent_item'                => __( 'Parent Portfolio Type', 'genesis-simple-portfolio' ),
 		'parent_item_colon'          => __( 'Parent Portfolio Type:', 'genesis-simple-portfolio' ),
 		'search_items'               => __( 'Search Portfolio Types', 'genesis-simple-portfolio' ),
-		'popular_items'              => __( 'Popular Portfolio Types', 'genesis-simple-portfolio' ),
+//		'popular_items'              => __( 'Popular Portfolio Types', 'genesis-simple-portfolio' ),
 		'separate_items_with_commas' => __( 'Separate portfolio types with commas', 'genesis-simple-portfolio' ),
 		'add_or_remove_items'        => __( 'Add or remove portfolio types', 'genesis-simple-portfolio' ),
 		'choose_from_most_used'      => __( 'Choose from the most used portfolio types', 'genesis-simple-portfolio' ),
@@ -71,7 +71,7 @@ function gsp_type_taxonomy() {
 		'show_admin_column'	=> true,
 		'hierarchical'		=> true, // True allows descendants/sub-levels (like categories)
 		'query_var'		=> true,
-		'rewrite'		=> array( 'slug' => 'type', 'with_front' => false, 'hierarchical' => true ), // Permalink formats
+		'rewrite'		=> array( 'slug' => 'portfolio/type', 'with_front' => false, 'hierarchical' => true ), // Permalink formats
 	  ); 
 
 	register_taxonomy( 'type', 'portfolio', $args );
@@ -94,7 +94,7 @@ function gsp_label_taxonomy() {
 		'parent_item'                => __( 'Parent Portfolio Label', 'genesis-simple-portfolio' ),
 		'parent_item_colon'          => __( 'Parent Portfolio Label:', 'genesis-simple-portfolio' ),
 		'search_items'               => __( 'Search Portfolio Labels', 'genesis-simple-portfolio' ),
-		'popular_items'              => __( 'Popular Portfolio Labels', 'genesis-simple-portfolio' ),
+//		'popular_items'              => __( 'Popular Portfolio Labels', 'genesis-simple-portfolio' ),
 		'separate_items_with_commas' => __( 'Separate portfolio labels with commas', 'genesis-simple-portfolio' ),
 		'add_or_remove_items'        => __( 'Add or remove portfolio labels', 'genesis-simple-portfolio' ),
 		'choose_from_most_used'      => __( 'Choose from the most used portfolio labels', 'genesis-simple-portfolio' ),
@@ -112,7 +112,7 @@ function gsp_label_taxonomy() {
 		'show_admin_column'	=> true,
 		'hierarchical'		=> false, // False denies descendants/sub-levels (like tags)
 		'query_var'		=> true,
-		'rewrite'		=> array( 'slug' => 'label', 'with_front' => false, 'hierarchical' => false ), // Permalink formats
+		'rewrite'		=> array( 'slug' => 'portfolio/label', 'with_front' => false, 'hierarchical' => false ), // Permalink formats
 	  ); 
 
 	register_taxonomy( 'label', 'portfolio', $args );
@@ -183,7 +183,7 @@ function gsp_portfolio_post_type() {
 // = Portfolio Permalink Rules =
 // =================================================================
 
-//* Flush rewrite rules after activating plugin
+//* Flush rewrite rules after (de)activating plugin
 register_activation_hook( __FILE__, 'gsp_rewrite_flush' );
 function gsp_rewrite_flush() {
 
@@ -192,6 +192,8 @@ function gsp_rewrite_flush() {
 	gsp_portfolio_post_type();
 	flush_rewrite_rules();
 }
+
+register_deactivation_hook( __FILE__, 'flush_rewrite_rules' ); // WordPress does not yet support this action. Click Settings > Permalinks in the WordPress menu to manually flush rewrite rules after deactivating the plugin.
 
 //* Tell WordPress the slug is taken for hierarchical posts
 add_filter( 'wp_unique_post_slug_is_bad_hierarchical_slug', 'gsp_is_bad_hierarchical_slug', 10, 4 );
