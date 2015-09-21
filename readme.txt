@@ -9,11 +9,13 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a portfolio custom post type to any WordPress theme, with support for the Genesis framework.
+Adds a portfolio custom post type to any WordPress website, with support for the Genesis framework.
 
 == Description ==
 
-This is a lightweight and simple plugin that adds a custom post type ('portfolio') with two clean taxonomies ('types' and 'labels') to your WordPress installation. It can be used for creating a portfolio on any WordPress theme, and also includes special support for the Genesis framework. One or more portfolios can be created with a wide variety of uses, such as a photography album, personal project listings and work services. The plugin also features a few nifty extras to enhance the user experience by adding featured image thumbnails and a filtering system to the Portfolio admin menu for easy searching through your items.
+This is a lightweight and simple plugin that creates a custom post type ('portfolio') with two clean taxonomies ('types' and 'labels') to your WordPress installation. It can be used for creating a portfolio on any WordPress website, and also includes special support for the Genesis framework.
+
+One or more portfolios can be created with a wide variety of uses, such as a photography album, personal project listings and work services. The plugin also features a few nifty extras to enhance the user experience by adding featured image thumbnails and a filtering system to the Portfolio admin menu for easy searching through your items.
 
 == Installation ==
 
