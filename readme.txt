@@ -9,7 +9,7 @@ Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds a portfolio to any WordPress theme, with support for the Genesis framework.
+Adds a portfolio custom post type to any WordPress theme, with support for the Genesis framework.
 
 == Description ==
 
