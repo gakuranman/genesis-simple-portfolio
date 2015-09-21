@@ -7,7 +7,7 @@
  *	Author: Michael Gakuran
  *	Author URI: http://gakuran.com/
  *	Tags: portfolio, genesis
- *	Version: 0.2.0
+ *	Version: 0.3.0
  *	Text Domain: genesis-simple-portfolio
  *	License: GNU General Public License v2.0 (or later)
  *	License URI: http://www.opensource.org/licenses/gpl-license.php
