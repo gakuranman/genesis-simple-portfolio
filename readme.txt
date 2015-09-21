@@ -52,16 +52,24 @@ Read more on the plugin's tutorial page: http://gakuran.com/genesis-simple-portf
 
 == Changelog ==
 
-= 0.2 =
+= 0.3.0 =
+* Added deactivate rewrite flush rules (although WordPress does not yet support this).
+* Changed taxonomy slugs to portfolio/type and portfolio/label. This is especially important for types as WordPress reserves this slug for its own post types.
+* Updated Readme.
+
+= 0.2.0 =
 * Added rewrite flush rules to prevent 404s after activating plugin.
 * Added bad slug rules to prevent WordPress creating posts or pages using the Portfolio slug.
 
-= 0.1 =
+= 0.1.0 =
 * Initial release.
 
 == Upgrade Notice ==
 
-= 0.1 =
+= 0.3.0 =
+* Users should update to avoid clashes with WordPress post types.
+
+= 0.1.0 =
 * Initial release.
 
 == Thanks ==
