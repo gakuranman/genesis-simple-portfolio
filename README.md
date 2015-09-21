@@ -38,26 +38,26 @@ Read more on the plugin's tutorial page: http://gakuran.com/genesis-simple-portf
 
 ## == Changelog ==
 
-= 0.2 =
+#### = 0.2 =
 * Added rewrite flush rules to prevent 404s after activating plugin.
 * Added bad slug rules to prevent WordPress creating posts or pages using the Portfolio slug.
 
-= 0.1 =
+#### = 0.1 =
 * Inital release.
 
 ## == Upgrade Notice ==
 
-= 0.1 =
+#### = 0.1 =
 * Inital release.
 
 ## == Thanks ==
 
 A special thanks to all who have contributed.
 
-= Financial Donations =
+### = Financial Donations =
 * Be the first!
 
-= Code Contributions =
+### = Code Contributions =
 * Bill Erickson
 * Brian Gardner
 * Justin Tadlock
@@ -68,10 +68,10 @@ A special thanks to all who have contributed.
 * Rachel Carden
 * Brandon Kraft
 
-= Translations =
+### = Translations =
 * Be the first!
 
-= StudioPress =
+### = StudioPress =
 * Special thanks to StudioPress for creating the Genesis framework and making this possible.
 
 If you're not listed and think you should be, please drop me a line!
