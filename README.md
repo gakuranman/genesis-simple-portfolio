@@ -31,6 +31,10 @@ One or more portfolios can be created with a wide variety of uses, such as a pho
 
 ## == Frequently Asked Questions ==
 
+1. Do I need Genesis in order to use this plugin?
+
+No, you can use this plugin on any WordPress website or theme. The plugin includes special support for the Genesis framework (such as adding a Portfolio Archive Settings page, but this does not affect usage on regular WordPress websites.
+
 Read more on the plugin's tutorial page: http://gakuran.com/genesis-simple-portfolio/
 
 ## == Screenshots ==
@@ -45,12 +49,12 @@ Read more on the plugin's tutorial page: http://gakuran.com/genesis-simple-portf
 * Added bad slug rules to prevent WordPress creating posts or pages using the Portfolio slug.
 
 #### = 0.1 =
-* Inital release.
+* Initial release.
 
 ## == Upgrade Notice ==
 
 #### = 0.1 =
-* Inital release.
+* Initial release.
 
 ## == Thanks ==
 
