@@ -1,4 +1,4 @@
-## === Genesis Simple Portfolio ===
+# === Genesis Simple Portfolio ===
 
 * Contributors: gakuranman
 * Donate link: http://gakuran.com/genesis-simple-portfolio/
@@ -22,7 +22,7 @@ This is a lightweight and simple plugin that adds a custom post type ('portfolio
 3. Click on 'Portfolio' in the admin menu to add new items.
 4. Create a file called 'archive.php' in your WordPress theme to view archive listings.
 
-= Optional =
+### = Optional =
 
 5. Create a file called 'archive-portfolio.php' in your WordPress theme in order to customise the portfolio archive listing.
 6. Create files called 'taxonomy-type.php' and 'taxonomy-label.php' in your WordPress theme in order to customise the taxonomy archive listings.
