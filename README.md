@@ -2,7 +2,7 @@
 
 * Contributors: gakuranman
 * Donate link: http://gakuran.com/genesis-simple-portfolio/
-* Tags: genesis, genesiswp, studiopress, portfolio, photography, types, labels, custom post type, taxonomy
+* Tags: genesis, genesiswp, studiopress, portfolio, photography, categories, tags, custom post type, taxonomy
 * Requires at least: 3.5
 * Tested up to: 4.3.1
 * Stable tag: 1.0.0
@@ -13,7 +13,7 @@ Adds a portfolio custom post type to any WordPress website, with support for the
 
 ## == Description ==
 
-Genesis Simple Portfolio is a lightweight plugin that adds a custom post type ('portfolio') and two clean taxonomies ('types' and 'labels') to your WordPress installation. It can be used for creating a portfolio on any WordPress website, and also includes special support for the Genesis framework and child themes.
+Genesis Simple Portfolio is a lightweight plugin that adds a custom post type ('portfolio') and two clean taxonomies ('category' and 'tag') to your WordPress installation. It can be used for creating a portfolio on any WordPress website, and also includes special support for the Genesis framework and child themes.
 
 The plugin also features a few nifty extras. You can easily update any of the settings, such as the changing the name 'portfolio' to 'project'. You will also see featured image thumbnails in the Portfolio admin menus to enhance your experience, as well as a filtering system to let you search through your items!
 
@@ -39,7 +39,7 @@ Please note - this plugin does not control how portfolio items are displayed on 
 
 1. Create an 'archive.php' template in your WordPress theme to customise general archive listings.
 2. Create an 'archive-portfolio.php' template in your WordPress theme to customise the portfolio archive.
-3. Create 'taxonomy-type.php' and 'taxonomy-label.php' templates in your theme to customise the taxonomy archives.
+3. Create 'taxonomy-portfolio_category.php' and 'taxonomy-portfolio_tag.php' templates in your theme to customise the taxonomy archives.
 4. Create a 'single-portfolio.php' template to customise the portfolio single page view.
 
 #### = After De-activating =
@@ -59,7 +59,7 @@ Please read the plugin's tutorial page: http://gakuran.com/genesis-simple-portfo
 * Code cleanup.
 
 = 0.4.0 =
-* Added filterable arguments for custom post type and taxonomies. This allows you to modify any settings!
+* Added filterable arguments for custom post type and taxonomies which allows users to modify the settings.
 * Changed taxonomy labels to remove 'portfolio'.
 * Code cleanup.
 
