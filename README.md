@@ -53,6 +53,11 @@ Please read the plugin's tutorial page: http://gakuran.com/genesis-simple-portfo
 
 ## == Changelog ==
 
+= 0.5.0 =
+* Changed 'type' to 'category' and 'label' to 'tag' after reading more about portfolio naming standards.
+* All slugs and references through the plugin have been updated to reflect these changes.
+* Code cleanup.
+
 = 0.4.0 =
 * Added filterable arguments for custom post type and taxonomies. This allows you to modify any settings!
 * Changed taxonomy labels to remove 'portfolio'.
