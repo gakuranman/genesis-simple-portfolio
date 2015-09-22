@@ -7,7 +7,7 @@
  *	Author: Michael Gakuran
  *	Author URI: http://gakuran.com/
  *	Tags: portfolio, genesis
- *	Version: 0.4.0
+ *	Version: 0.5.0
  *	Text Domain: genesis-simple-portfolio
  *	License: GNU General Public License v2.0 (or later)
  *	License URI: http://www.opensource.org/licenses/gpl-license.php
@@ -36,28 +36,28 @@ function gsp_load_translations() {
 // = Portfolio Setup =
 // =================================================================
 
-//* Create hierarchical type taxonomy before custom post type for rewrite rules to work
-add_action( 'init', 'gsp_type_taxonomy' );
-function gsp_type_taxonomy() {
+//* Create hierarchical taxonomy before custom post type for rewrite rules to work
+add_action( 'init', 'gsp_portfolio_category_taxonomy' );
+function gsp_portfolio_category_taxonomy() {
 
 	$labels = array(
-		'name'				=> __( 'Types', 'genesis-simple-portfolio' ),
-		'singular_name'			=> __( 'Type', 'genesis-simple-portfolio' ),
-		'menu_name'			=> __( 'Types', 'genesis-simple-portfolio' ),
-		'all_items'			=> __( 'All Types', 'genesis-simple-portfolio' ),
-		'edit_item'			=> __( 'Edit Type', 'genesis-simple-portfolio' ),
-		'view_item'			=> __( 'View Type', 'genesis-simple-portfolio' ),
-		'update_item'			=> __( 'Update Type', 'genesis-simple-portfolio' ),
-		'add_new_item'			=> __( 'Add New Type', 'genesis-simple-portfolio' ),
-		'new_item_name'			=> __( 'New Type Name', 'genesis-simple-portfolio' ),
-		'parent_item'			=> __( 'Parent Type', 'genesis-simple-portfolio' ),
-		'parent_item_colon'		=> __( 'Parent Type:', 'genesis-simple-portfolio' ),
-		'search_items'			=> __( 'Search Types', 'genesis-simple-portfolio' ),
-		'popular_items'			=> __( 'Popular Types', 'genesis-simple-portfolio' ),
-		'separate_items_with_commas'	=> __( 'Separate types with commas', 'genesis-simple-portfolio' ),
-		'add_or_remove_items'		=> __( 'Add or remove types', 'genesis-simple-portfolio' ),
-		'choose_from_most_used'		=> __( 'Choose from the most used types', 'genesis-simple-portfolio' ),
-		'not_found'			=> __( 'No types found.', 'genesis-simple-portfolio' ),
+		'name'				=> __( 'Categories', 'genesis-simple-portfolio' ),
+		'singular_name'			=> __( 'Category', 'genesis-simple-portfolio' ),
+		'menu_name'			=> __( 'Categories', 'genesis-simple-portfolio' ),
+		'all_items'			=> __( 'All Categories', 'genesis-simple-portfolio' ),
+		'edit_item'			=> __( 'Edit Category', 'genesis-simple-portfolio' ),
+		'view_item'			=> __( 'View Category', 'genesis-simple-portfolio' ),
+		'update_item'			=> __( 'Update Category', 'genesis-simple-portfolio' ),
+		'add_new_item'			=> __( 'Add New Category', 'genesis-simple-portfolio' ),
+		'new_item_name'			=> __( 'New Category Name', 'genesis-simple-portfolio' ),
+		'parent_item'			=> __( 'Parent Category', 'genesis-simple-portfolio' ),
+		'parent_item_colon'		=> __( 'Parent Category:', 'genesis-simple-portfolio' ),
+		'search_items'			=> __( 'Search Categories', 'genesis-simple-portfolio' ),
+		'popular_items'			=> __( 'Popular Categories', 'genesis-simple-portfolio' ),
+		'separate_items_with_commas'	=> __( 'Separate categories with commas', 'genesis-simple-portfolio' ),
+		'add_or_remove_items'		=> __( 'Add or remove categories', 'genesis-simple-portfolio' ),
+		'choose_from_most_used'		=> __( 'Choose from the most used categories', 'genesis-simple-portfolio' ),
+		'not_found'			=> __( 'No categories found.', 'genesis-simple-portfolio' ),
 	);
 
 	$args = array(
@@ -71,36 +71,36 @@ function gsp_type_taxonomy() {
 		'show_admin_column'	=> true,
 		'hierarchical'		=> true, // True allows descendants/sub-levels (like categories)
 		'query_var'		=> true,
-		'rewrite'		=> array( 'slug' => 'portfolio/type', 'with_front' => false, 'hierarchical' => true ), // Permalink formats
+		'rewrite'		=> array( 'slug' => 'portfolio/category', 'with_front' => false, 'hierarchical' => true ), // Permalink formats
 	); 
 
-	$args = apply_filters('gsp_type_taxonomy_args', $args); // Allow users to change type taxonomy arguments
+	$args = apply_filters('gsp_portfolio_category_taxonomy_args', $args); // Ability to change category arguments
 
-	register_taxonomy( 'type', 'portfolio', $args );
+	register_taxonomy( 'portfolio_category', 'portfolio', $args );
 }
 
-//* Create non-hierarchical label taxonomy before custom post type for rewrite rules to work
-add_action( 'init', 'gsp_label_taxonomy' );
-function gsp_label_taxonomy() {
+//* Create non-hierarchical taxonomy before custom post type for rewrite rules to work
+add_action( 'init', 'gsp_portfolio_tag_taxonomy' );
+function gsp_portfolio_tag_taxonomy() {
 
 	$labels = array(
-		'name'				=> __( 'Labels', 'genesis-simple-portfolio' ),
-		'singular_name'			=> __( 'Label', 'genesis-simple-portfolio' ),
-		'menu_name'			=> __( 'Labels', 'genesis-simple-portfolio' ),
-		'all_items'			=> __( 'All Labels', 'genesis-simple-portfolio' ),
-		'edit_item'			=> __( 'Edit Label', 'genesis-simple-portfolio' ),
-		'view_item'			=> __( 'View Label', 'genesis-simple-portfolio' ),
-		'update_item'			=> __( 'Update Label', 'genesis-simple-portfolio' ),
-		'add_new_item'			=> __( 'Add New Label', 'genesis-simple-portfolio' ),
-		'new_item_name'			=> __( 'New Label Name', 'genesis-simple-portfolio' ),
-		'parent_item'			=> __( 'Parent Label', 'genesis-simple-portfolio' ),
-		'parent_item_colon'		=> __( 'Parent Label:', 'genesis-simple-portfolio' ),
-		'search_items'			=> __( 'Search Labels', 'genesis-simple-portfolio' ),
-		'popular_items'			=> __( 'Popular Labels', 'genesis-simple-portfolio' ),
-		'separate_items_with_commas'	=> __( 'Separate labels with commas', 'genesis-simple-portfolio' ),
-		'add_or_remove_items'		=> __( 'Add or remove labels', 'genesis-simple-portfolio' ),
-		'choose_from_most_used'		=> __( 'Choose from the most used labels', 'genesis-simple-portfolio' ),
-		'not_found'			=> __( 'No labels found.', 'genesis-simple-portfolio' ),
+		'name'				=> __( 'Tags', 'genesis-simple-portfolio' ),
+		'singular_name'			=> __( 'Tag', 'genesis-simple-portfolio' ),
+		'menu_name'			=> __( 'Tags', 'genesis-simple-portfolio' ),
+		'all_items'			=> __( 'All Tags', 'genesis-simple-portfolio' ),
+		'edit_item'			=> __( 'Edit Tag', 'genesis-simple-portfolio' ),
+		'view_item'			=> __( 'View Tag', 'genesis-simple-portfolio' ),
+		'update_item'			=> __( 'Update Tag', 'genesis-simple-portfolio' ),
+		'add_new_item'			=> __( 'Add New Tag', 'genesis-simple-portfolio' ),
+		'new_item_name'			=> __( 'New Tag Name', 'genesis-simple-portfolio' ),
+		'parent_item'			=> __( 'Parent Tag', 'genesis-simple-portfolio' ),
+		'parent_item_colon'		=> __( 'Parent Tag:', 'genesis-simple-portfolio' ),
+		'search_items'			=> __( 'Search Tags', 'genesis-simple-portfolio' ),
+		'popular_items'			=> __( 'Popular Tags', 'genesis-simple-portfolio' ),
+		'separate_items_with_commas'	=> __( 'Separate tags with commas', 'genesis-simple-portfolio' ),
+		'add_or_remove_items'		=> __( 'Add or remove tags', 'genesis-simple-portfolio' ),
+		'choose_from_most_used'		=> __( 'Choose from the most used tags', 'genesis-simple-portfolio' ),
+		'not_found'			=> __( 'No tags found.', 'genesis-simple-portfolio' ),
 	);
 
 	$args = array(
@@ -114,12 +114,12 @@ function gsp_label_taxonomy() {
 		'show_admin_column'	=> true,
 		'hierarchical'		=> false, // False denies descendants/sub-levels (like tags)
 		'query_var'		=> true,
-		'rewrite'		=> array( 'slug' => 'portfolio/label', 'with_front' => false ), // Permalink formats
+		'rewrite'		=> array( 'slug' => 'portfolio/tag', 'with_front' => false ), // Permalink formats
 	  ); 
 
-	$args = apply_filters('gsp_label_taxonomy_args', $args); // Allow users to change label taxonomy arguments
+	$args = apply_filters('gsp_portfolio_tag_taxonomy_args', $args); // Ability to change tag arguments
 
-	register_taxonomy( 'label', 'portfolio', $args );
+	register_taxonomy( 'portfolio_tag', 'portfolio', $args );
 }
 
 //* Create portfolio custom post type
@@ -173,14 +173,14 @@ function gsp_portfolio_post_type() {
 		'menu_icon'		=> 'dashicons-portfolio',
 		'capability_type'	=> 'post',
 		'hierarchical'		=> false, // True allows descendants/sub-levels (like Pages)
-		'taxonomies'		=> array( 'type', 'label' ),
+		'taxonomies'		=> array( 'portfolio_category', 'portfolio_tag' ),
 		'has_archive'		=> true,
 		'query_var'		=> true,
 		'can_export'		=> true,
 		'rewrite'		=> array( 'slug' => 'portfolio', 'with_front' => false ), // Permalink formats
 	); 
 
-	$args = apply_filters('gsp_post_type_args', $args); // Allow users to change custom post type arguments
+	$args = apply_filters('gsp_portfolio_post_type_args', $args); // Ability to change portfolio arguments
 
 	register_post_type( 'portfolio', $args );
 }
@@ -194,8 +194,8 @@ register_deactivation_hook( __FILE__, 'flush_rewrite_rules' ); // WordPress does
 register_activation_hook( __FILE__, 'gsp_rewrite_flush' );
 function gsp_rewrite_flush() {
 
-	gsp_type_taxonomy();
-	gsp_label_taxonomy();
+	gsp_portfolio_category_taxonomy();
+	gsp_portfolio_tag_taxonomy();
 	gsp_portfolio_post_type();
 	flush_rewrite_rules();
 }
@@ -204,7 +204,7 @@ function gsp_rewrite_flush() {
 add_filter( 'wp_unique_post_slug_is_bad_hierarchical_slug', 'gsp_is_bad_hierarchical_slug', 10, 4 );
 function gsp_is_bad_hierarchical_slug( $is_bad_hierarchical_slug, $slug, $post_type, $post_parent ) {
 
-	if ( !$post_parent && $slug == 'portfolio' || $slug == 'type' || $slug == 'label'  )
+	if ( !$post_parent && $slug == 'portfolio' || $slug == 'portfolio_category' || $slug == 'portfolio_tag'  )
 		return true;
 	return $is_bad_hierarchical_slug;
 }
@@ -213,7 +213,7 @@ function gsp_is_bad_hierarchical_slug( $is_bad_hierarchical_slug, $slug, $post_t
 add_filter( 'wp_unique_post_slug_is_bad_flat_slug', 'gsp_is_bad_flat_slug', 10, 3 );
 function gsp_is_bad_flat_slug( $is_bad_flat_slug, $slug, $post_type ) {
 
-	if ( $slug == 'portfolio' || $slug == 'type' || $slug == 'label' )
+	if ( $slug == 'portfolio' || $slug == 'portfolio_category' || $slug == 'portfolio_tag' )
 		return true;
 	return $is_bad_flat_slug;
 }
@@ -233,7 +233,7 @@ function gsp_portfolio_post_column($columns){
 	$columns['thumbnail'] = __( 'Thumbnail', 'genesis-simple-portfolio' );
 
 	// Define order of columns
-	$customOrder = array('cb', 'title', 'thumbnail', 'author', 'taxonomy-type', 'taxonomy-label', 'comments', 'date');
+	$customOrder = array('cb', 'title', 'thumbnail', 'author', 'taxonomy-portfolio_category', 'taxonomy-portfolio_tag', 'comments', 'date');
 	foreach ($customOrder as $colname)
 		$new[$colname] = $columns[$colname];    
 	return $new;
@@ -262,7 +262,7 @@ function gsp_add_taxonomy_filters() {
 	if ($typenow == 'portfolio') {
 
 		// Create an array of taxonomy slugs for filtering
-		$filters = array('type', 'label');
+		$filters = array('portfolio_category', 'portfolio_tag');
 
 		foreach ($filters as $tax_slug) {
 
