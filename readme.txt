@@ -39,7 +39,7 @@ Please note - this plugin does not control how portfolio items are displayed on 
 
 1. Create an 'archive.php' template in your WordPress theme to customise general archive listings.
 2. Create an 'archive-portfolio.php' template in your WordPress theme to customise the portfolio archive.
-3. Create 'taxonomy-portfolio_category.php' and 'taxonomy-portfolio_label.php' templates in your theme to customise the taxonomy archives.
+3. Create 'taxonomy-portfolio_category.php' and 'taxonomy-portfolio_tag.php' templates in your theme to customise the taxonomy archives.
 4. Create a 'single-portfolio.php' template to customise the portfolio single page view.
 
 = Deactivating & Uninstalling =
