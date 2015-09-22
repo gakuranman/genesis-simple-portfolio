@@ -32,7 +32,7 @@ Please note - this plugin does not control how portfolio items are displayed on 
 
 1. Download the latest plugin file and unzip the plugin.
 2. Copy the folder to your /wp-content/plugins/ directory.
-3. On your WordPress website, go to the Plugins screen and click 'Activate'.
+3. On your WordPress website, go to the Plugins screen and click 'Activate Plugin'.
 4. Add new portfolio items through the brand new 'Portfolio' menu.
 
 = Optional =
@@ -76,12 +76,16 @@ Please read the plugin's tutorial page: http://gakuran.com/genesis-simple-portfo
 
 == Thanks ==
 
-A special thanks to all who have contributed:
+A special thanks to all who have contributed.
 
 = Financial Donations =
+
 * Be the first!
 
 = Code Contributions =
+
+The following people contributed indirectly through their expert tutorials shared code online:
+
 * Bill Erickson
 * Brian Gardner
 * Justin Tadlock
@@ -94,9 +98,11 @@ A special thanks to all who have contributed:
 * Devin Price
 
 = Translations =
+
 * Be the first!
 
 = StudioPress =
+
 * Special thanks to StudioPress for creating the Genesis framework and making this possible.
 
 If you're not listed and think you should be, please drop me a line!
