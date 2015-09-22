@@ -254,8 +254,8 @@ function gsp_column_width() {
 }
 
 //* Add Portfolio filters to admin screen - set typenow and filters
-add_action( 'restrict_manage_posts', 'gsp_restrict_manage_posts' );
-function gsp_restrict_manage_posts() {
+add_action( 'restrict_manage_posts', 'gsp_add_taxonomy_filters' );
+function gsp_add_taxonomy_filters() {
 
 	// Only display taxonomy filters on desired custom post types
 	global $typenow;
@@ -278,7 +278,7 @@ function gsp_restrict_manage_posts() {
 			echo "<option value=''>Show All $tax_name</option>";
 			foreach ($terms as $term) {
 
-				// Output each select option line, check against the last $_GET to show the current option selected
+				// Check against the last tax_slug and show the current option selected
 				echo '<option value='. $term->slug, $_GET[$tax_slug] == $term->slug ? ' selected="selected"' : '','>' . $term->name .' (' . $term->count .')</option>';
 			}
 			echo "</select>";
